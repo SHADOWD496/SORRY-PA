@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open the Letter with Heart</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url(./bg\ heart.jpg);
+            background-size: 100vw;
+            color: #333;
+        }
+
+        #envelope {
+            background-image: url(./paper.jpg);
+            position: relative;
+            width: 80vw;
+            max-width: 300px;
+            height: 150px;
+            background-color: #fff;
+            border: 2px solid #333;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+             
+        }
+
+        #letter {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            width: 80%;
+            max-width: 300px;
+            background-color: #fff;
+            border: 2px solid #333;
+            border-radius: 10px;
+            display: none;
+        }
+
+        #envelope:hover {
+            transform: scale(1.1);
+        }
+
+        #envelope::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 4px;
+            background-color: #333;
+        }
+        .open-text{
+            text-align: center;
+        }
+        
+
+        #letter-content {
+            background-image: url(./paper.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            text-align: justify;
+            padding: 10px;
+            max-height: 70vh;
+        }
+        .pic{
+            height: 20vh;
+            float: left;
+            padding-right: 10px;
+        }
+        .fixed-image-container {
+      position: fixed;
+      bottom: 10px;  
+      right: 10px; 
+      cursor: pointer;
+    }
+    .fixed-image-container2 {
+      position: fixed;
+      bottom: 10px;  
+      left: 10px; 
+      cursor: pointer;
+    }
+
+    .fixed-image {
+      width: 100px; 
+      height: auto;
+      opacity: 50%;
+    }
+    </style>
+</head>
+<body>
+    <div id="envelope" onclick="openLetter()">
+        <p class="open-text"> 🥰❤️TAP TO OPEN 🥰❤️</p>
+         
+        <div id="letter">
+            <div id="letter-content">
+                <p><img src="./letter img.jpg" class="pic">  HI LOVE, I know quite a set back day but i am really sorry about it i cant take your silence i will do everything possible for you. I know i am not perfect good looking not yet earning dumb watever but i loved you with my full heart , everything i did was a reaction of the fear of losing you , its not that i dont trust you its just i know how easily i am replaceable . I just wished that our little world had just two of us but accidentally ended up making you feel contrrolled , i never wished tto hurt you or make you feel heavy but ended up doing it i am sorry love please come back to normal i cant stay without you , i got blind in my immaturity but i didnt have control i got panicked , i am not perfect but i wanna be near perfect for you i know you are not okay 
+                    . i am sorry I JUST LOVE YOU AMIO I WOULD NEVER LOSE YOU- Your LOVE
+                       . I let you down, I made it rain,
+                        I caused a shadow, brought you pain.
+                        With humbled heart, I softly plea,
+                        Please accept this sorry from me.
+                     </p>
+                     
+            </div>
+        </div>
+    </div>
+    <div class="fixed-image-container">
+        <a href="../index.html">
+          <img src="../images/heart1.png" alt="Clickable Image" class="fixed-image">
+        </a>
+        
+      </div>
+      <div class="fixed-image-container2">
+        <a href="../index.html">
+          <img src="gif1.gif" alt="Clickable Image" class="fixed-image">
+        </a>
+        
+      </div>
+      
+
+
+    <script>
+        function openLetter() {
+            const letter = document.getElementById("letter");
+            letter.style.display = (letter.style.display === "none" || letter.style.display === "") ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
